@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div>
+    <h3>Поиск</h3>
+    <form id="forma1" action="/search" method="get">
+        <input id="search" autocomplete="off" name="search" placeholder="Поиск" type="text">
+        <button id="submit" type="submit">Поиск</button>
+    </form>
+    <h3>Добавить новый комплект</h3>
+    <form id="forma2" action="/add" method="post">
+        <input id="plc" autocomplete="off" name="place" placeholder="Место" type="text">
+        <input id="addition" autocomplete="off" name="number" placeholder="Номер" type="text">
+        <button id="submit2" type="submit">Добавить</button>
+    </form>
+</div>
+<script>
+"""    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#submit').disabled = true;
+        document.querySelector('#submit2').disabled = true;
+
+        document.querySelector('#search').onkey = () => {
+            if (document.querySelector('#search').value.lenght > 0) {
+            document.querySelector('#submit').disabled = false;
+            } else {
+                document.querySelector('#submit').disabled = true;
+            }
+        }
+        document.querySelector('#addition').onkeyup = () => {
+            if ((document.querySelector('#plc').value.lenght > 0) && (document.querySelector('#addition').value.lenght > 0)) {
+                document.querySelector('#submit2').disabled = false;
+            } else {
+                    document.querySelector('#submit2').disabled = true;
+            }
+        }
+
+    })  """
+</script>
+{% endblock %}

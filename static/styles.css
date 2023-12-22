@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif, Arial;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    }
+head {
+    font-size: 15px;
+    padding: 10px;
+    }
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 5px;
+}
+.mtb-3{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.table {
+    width: 33%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+}
+
+.table th, .table td{
+    text-align: center;
+    padding: 5px;
+}
+
+.table tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+.table tr {
+    transition: all .3s;
+}
+
+.table tr:hover {
+    background-color: #5f5f5f;
+}
+
+.table td:not(:last-child){
+    border-right: 1px solid #ccc;
+}

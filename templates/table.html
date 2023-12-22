@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block table %}
+
+<div id="container">
+{% for place, number1, number2 in places  %}
+
+    <div>
+        <ul>
+          <li>  Место #{{ place }}</li>
+        <li><a>Позиция первая {{ number1 }}</a>
+        <form action="/delete" method="post">
+            <input name="number" type="hidden" value="{{ number1 }}">
+            <button type="submit">Убрать</button>
+        </form> </li>
+        <li><a>Позиция вторая {{ number2 }}</a>
+        <form action="/delete" method="post">
+            <input name="number" type="hidden" value="{{ number2 }}">
+            <button type="submit">Убрать</button>
+        </form></li>
+        </ul>
+    </div>
+
+
+
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% for number, place in results %}
+<div> Номер комплекта {{ number }}</div>
+<div> Найден на месте {{ place }}</div>
+{% endfor %}
+    {% for line in result_lines %}
+
+        <h2>{{ line }}</h2>
+
+    {% endfor %}
+
+
+{% endblock %}

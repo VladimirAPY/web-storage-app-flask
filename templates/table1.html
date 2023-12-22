@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container mtb-3">
+    <table class="table" style="float: left">
+        <caption>Таблица Склада</caption>
+        <thead>
+            <tr>
+                <th>Место</th>
+                <th>Номер комплекта 1</th>
+                <th>Номер комплекта 2</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for place, number1, number2 in places  %}
+        <tr>
+            <th>{{ place }}</th>
+            <th>{{ number1 }}
+                <form action="/delete" method="post">
+                    <input name="number" type="hidden" value="{{ number1 }}">
+                    <button type="submit" name="{{ number1 }}">Убрать</button>
+                </form></th>
+            <th>{{ number2 }}
+                <form action="/delete" method="post">
+                    <input name="number" type="hidden" value="{{ number2 }}">
+                    <button  type="submit" name="{{ number2 }}">Убрать</button>
+                </form>
+            </th>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+
+
+
+
+<table class="table" style="float: left">
+        <caption>Таблица Склада</caption>
+        <thead>
+            <tr>
+                <th>Место</th>
+                <th>Номер комплекта 1</th>
+                <th>Номер комплекта 2</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for place, number1, number2 in places2  %}
+        <tr>
+            <th>{{ place }}</th>
+            <th>{{ number1 }}
+                <form action="/delete" method="post">
+                    <input name="number" type="hidden" value="{{ number1 }}">
+                    <button type="submit" name="{{ number1 }}">Убрать</button>
+                </form></th>
+            <th>{{ number2 }}
+                <form action="/delete" method="post">
+                    <input name="number" type="hidden" value="{{ number2 }}">
+                    <button  type="submit" name="{{ number2 }}">Убрать</button>
+                </form>
+            </th>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+
+<table class="table" style="float: left">
+        <caption>Таблица Склада</caption>
+        <thead>
+            <tr>
+                <th>Место</th>
+                <th>Номер комплекта 1</th>
+                <th>Номер комплекта 2</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for place, number1, number2 in places3  %}
+        <tr>
+            <th>{{ place }}</th>
+            <th>{{ number1 }}
+                <form action="/delete" method="post">
+                    <input name="number" type="hidden" value="{{ number1 }}">
+                    <button type="submit" name="{{ number1 }}">Убрать</button>
+                </form></th>
+            <th>{{ number2 }}
+                <form action="/delete" method="post">
+                    <input name="number" type="hidden" value="{{ number2 }}">
+                    <button  type="submit" name="{{ number2 }}">Убрать</button>
+                </form>
+            </th>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    </div>
+
+<script>
+f = document.querySelectorAll('button[name="None"]');
+for (let i = 0; i < f.length; i++){
+  f[i].hidden = true;
+  f[i].disabled = true;
+}
+</script>
+
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+    {% for line in log %}
+
+        <h2>{{ line }}</h2>
+
+    {% endfor %}
+
+
+{% endblock %}
